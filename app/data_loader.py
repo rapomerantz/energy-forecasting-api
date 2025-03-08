@@ -1,10 +1,10 @@
 import os
 import kaggle
 import pandas as pd
-import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error
+from storage import save_model
 
 # Paths
 DATASET = "mrsimple07/energy-consumption-prediction"
@@ -90,14 +90,6 @@ def evaluate_model(model, X_test, y_test):
 
     print(f"Mean Absolute Error (MAE): {mae:.2f}")
     print(f"Mean Squared Error (MSE): {mse:.2f}")
-
-def save_model(model):
-    """Saves the trained model to disk."""
-    if not os.path.exists(MODEL_DIR):
-        os.makedirs(MODEL_DIR)
-
-    joblib.dump(model, MODEL_PATH)
-    print(f"Model saved to {MODEL_PATH}")
 
 # only run directly, not from outside this file
 if __name__ == "__main__":
