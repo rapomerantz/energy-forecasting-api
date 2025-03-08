@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.env
+
+# Kaggle API Config
+config/
+
+# Data
+/data/
+
+# Logs
+logs/
+*.log
+
+# Docker
+*.dockerignore
+*.log
+docker-compose.override.yml
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# OS-specific
+.DS_Store
+Thumbs.db
